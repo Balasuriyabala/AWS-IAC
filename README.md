@@ -3,6 +3,7 @@ AWS SERVICES
 
 # AWS THREE TIER 
 # STEP:1
+
 1.Create Vpc
 2.Create Public and Private Subnet
 3.Create Internet gatway and Associate to vpc
