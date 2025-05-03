@@ -21,6 +21,10 @@ resource "aws_subnet" "public_subnet" {
   vpc_id = aws_vpc.webapp.id   
   cidr_block = var.webapp_public_subnet_cidr_blocks[count.index]
   availability_zone = var.cidr_block[count.index]
+
+   tags = {
+    Name = "public-subnet-${count.index + 1}"
+  }
 }
 
 # Create private subnets
@@ -29,4 +33,8 @@ resource "aws_subnet" "private_subnet" {
   vpc_id = aws_vpc.webapp.id
   cidr_block = var.webapp_private_subnet_cidr_blocks[count.index]
   availability_zone = var.cidr_block[count.index]
+
+  tags = {
+    Name = "private-subnet-${count.index + 1}"
+  }
 }
