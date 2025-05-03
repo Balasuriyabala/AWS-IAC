@@ -26,7 +26,7 @@ variable "cidr_block_private1a" {
     default = "10.0.103.0/24"
 } 
 
-variable "cidr_block_private1a" {
+variable "cidr_block_private1b" {
     type = string
     default = "10.0.104.0/24"
 } 
