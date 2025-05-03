@@ -13,5 +13,11 @@ variable "availability_zones" {
 variable "webapp_public_subnet_cidr_blocks" {
   description = "List of CIDR blocks for the public subnets."
   type        = list(string)
-  default     = ["10.0.0.5/24", "10.0.0.6/24"]  
+  default     = ["10.0.3.0/24", "10.0.4.0/24"]  
+}
+
+variable "webapp_private_subnet_cidr_blocks" {
+  description = "List of CIDR blocks for the private subnets."
+  type        = list(string)
+  default     = ["10.0.5.0/24", "10.0.6.0/24"]  
 }
