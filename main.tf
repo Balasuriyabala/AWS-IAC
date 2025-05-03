@@ -24,3 +24,10 @@ module "S3" {
  # aws_s3_bucket    = "yamahamt15-${random_id.suffix.hex}" 
 
 }
+# VPC module
+module "vpc" {
+  source = "./modules/vpc"
+  cidr_block = module.vpc.cidr_block
+  availability_zones =module.vpc.availability_zones
+  webapp_public_subnet_cidr_blocks = module.vpc.webapp_public_subnet_cidr_blocks
+}
