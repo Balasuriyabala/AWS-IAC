@@ -1,15 +1,32 @@
 variable "cidr_block" {
-  type = string
+    type = string
+    description = "custom vpc"
+    default = "10.0.0.0/16"
+
 }
 
-variable "availability_zones" {
-  type = list(string)
+variable "instance_tenancy" {
+  description = "Instance tenancy for the VPC"
+  type        = string
+  default     = "default" 
+} 
+
+variable "cidr_block_public1a" {
+    type = string
+    default = "10.0.1.0/24"
+} 
+
+variable "cidr_block_public1b" {
+    type = string
+    default = "10.0.2.0/24"
 }
 
-variable "webapp_public_subnet_cidr_blocks" {
-  type = list(string)
-}
+variable "cidr_block_private1a" {
+    type = string
+    default = "10.0.103.0/24"
+} 
 
-variable "webapp_private_subnet_cidr_blocks" {
-  type = list(string)
-}
+variable "cidr_block_private1a" {
+    type = string
+    default = "10.0.104.0/24"
+} 
